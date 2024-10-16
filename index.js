@@ -23,8 +23,8 @@ const part1 = "java";
 const part2 = "script";
 
 // Convert the last letter of part1 and part2 to uppercase and concatenate the strings
-const camelPart1 = part1.slice(0,3) + part1.slice(-1).toUpperCase()
-const camelPart2 = part2.slice(0, 5) + part2.slice(-1).toUpperCase()
+const camelPart1 = part1.slice(0, part1.length -1) + part1.slice(-1).toUpperCase()
+const camelPart2 = part2.slice(0, part2.length -1) + part2.slice(-1).toUpperCase()
 camelTailString = camelPart1 + camelPart2
 
 
@@ -40,7 +40,9 @@ console.log(camelTailString)
 const billTotal = 84;
 
 // Calculate the tip (15% of the bill total)
-let tipAmount = Number(Math.round((15 / billTotal) * 100))
+let tip = (15 / billTotal) * 100
+let tipAmount = Number(tip.toFixed(2))
+
 
 // Print out the tipAmount
 console.log(tipAmount)
